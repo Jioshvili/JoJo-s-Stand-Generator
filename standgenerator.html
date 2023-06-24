@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stand Generator</title>
+    <style>
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        img {
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .stand-name,
+        .stand-user {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .stand-name {
+            color: white;
+        }
+
+        .stand-user {
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>You Got:</h1>
+    <div class="photo-container">
+        {% if photo %}
+            <img src="{{ photo[2] }}" alt="{{ photo[0] }}">
+            <p class="stand-name">Stand Name: {{ photo[0] }}</p>
+            <p class="stand-user">Stand User: {{ photo[1] }}</p>
+        {% else %}
+            <p>No photos available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

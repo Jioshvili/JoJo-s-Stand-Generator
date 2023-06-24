@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JoJo's Stand Generator</title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+
+    }
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: purple;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to JoJo's Stand Generator</h1>
+    <p>Greetings, JoJo fan! Are you ready to create your own stand and dive into the world of JoJo's Bizarre Adventure?</p>
+    <p>To generate your stand, simply click the button below</p>
+    <a href="/standgenerator" class="button">Generate Your Stand</a>
+    {% if 'username' not in session %}
+    <p>If you already have an account, you can <a href="login">log in here</a> to access additional features.</p>
+    {% endif %}
+    {% if 'username' in session %}
+    <p></p>
+    {% endif %}
+  </div>
+</body>
+</html>
